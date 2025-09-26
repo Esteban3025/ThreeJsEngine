@@ -1,15 +1,15 @@
 class ColorGUIHelper {
-	constructor( object, prop ) {
+  constructor( object, prop ) {
     this.object = object;
-		this.prop = prop;
-	}
-		
+    this.prop = prop;
+  }
+    
   get value() {
-		return `#${this.object[ this.prop ].getHexString()}`;
-	}
-		
+    return `#${this.object[ this.prop ].getHexString()}`;
+  }
+    
   set value( hexString ) {
-		this.object[ this.prop ].set( hexString );
+    this.object[ this.prop ].set( hexString );
   }
 }
 

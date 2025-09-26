@@ -1,31 +1,14 @@
 import * as THREE from 'three';
 
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
 import MinMaxGUIHelper from './src/helpers/CameraHelper.mjs';
-// import ColorGUIHelper from './src/helpers/CameraHelper.mjs';
+import ColorGUIHelper from './src/helpers/LigthHelper.mjs';
 
 import CharacterController from '/src/CharacterController.mjs';
-
-class ColorGUIHelper {
-	constructor( object, prop ) {
-    this.object = object;
-		this.prop = prop;
-	}
-		
-  get value() {
-		return `#${this.object[ this.prop ].getHexString()}`;
-	}
-		
-  set value( hexString ) {
-		this.object[ this.prop ].set( hexString );
-  }
-}
-
-export default ColorGUIHelper;
 
 class World {
   constructor() {
